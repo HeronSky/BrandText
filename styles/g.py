@@ -1,6 +1,6 @@
 from PIL import Image,ImageDraw,ImageFont
 
-def render(text, font_size):
+def render(text,font_size):
     colors = ["#4285F4","#EA4335","#FBBC05","#4285F4","#34A853","#EA4335"]
     try:
         font_en = font_num = ImageFont.truetype("fonts/GoogleSansFlex_120pt-Medium.ttf",font_size)
@@ -10,7 +10,7 @@ def render(text, font_size):
         
     new_width = len(text) * font_size * 3
     new_height = font_size * 3
-    canva = Image.new("RGBA", (int(new_width), int(new_height)), (255, 255, 255, 0))
+    canva = Image.new("RGBA",(int(new_width),int(new_height)),(255,255,255,0))
     draw = ImageDraw.Draw(canva)
 
     current_x = current_y = 100
@@ -23,15 +23,15 @@ def render(text, font_size):
         else:
             target_font=font_en            
 
-        draw.text((current_x,current_y), text[i], fill=colors[i % len(colors)], font=target_font)
+        draw.text((current_x,current_y),text[i],fill=colors[i % len(colors)],font=target_font)
 
-        bbox = draw.textbbox((0,0), text[i], font=target_font)
+        bbox = draw.textbbox((0,0),text[i],font=target_font)
         char_w = bbox[2] - bbox[0]
         current_x += char_w
 
     crop_bbox = canva.getbbox()
     if crop_bbox:
-        left, top, right, bottom = crop_bbox
+        left,top,right,bottom = crop_bbox
         margin = 20 
         new_bbox = (left - margin, top - margin, right + margin, bottom + margin)
         return canva.crop(new_bbox) 
