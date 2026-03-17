@@ -25,7 +25,7 @@ BrandText is a Streamlit-based text image generator. Users can input text and se
 └── styles/              
     ├── g.py             
     └── n.py
-
+```
 
 ## Execution and Installation
 1. Install dependencies
