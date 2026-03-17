@@ -3,7 +3,7 @@ from PIL import Image,ImageDraw,ImageFont
 def render(text,font_size):
     colors = ["#4285F4","#EA4335","#FBBC05","#4285F4","#34A853","#EA4335"]
     try:
-        font_en = font_num = ImageFont.truetype("fonts/GoogleSansFlex_120pt-Medium.ttf",font_size)
+        font_en = font_num = ImageFont.truetype("fonts/GoogleSansFlex.ttf",font_size)
         font_zh = ImageFont.truetype("fonts/NotoSansTC-Bold.ttf",font_size)
     except:
         font_en = font_num = font_zh = ImageFont.load_default()
