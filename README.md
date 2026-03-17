@@ -11,7 +11,7 @@
 BrandText is a Streamlit-based text image generator. Users can input text and select a style to generate a corresponding image.
 
 <p align="center">
-   <img src="screenshot.png" style="width: 70%; max-width: 640px; height: auto;" alt="App Preview">
+   <img src="screenshot.png" style="width: 100%; max-width: 640px; height: auto;" alt="App Preview">
 </p>
 
 ## File Structure
@@ -49,7 +49,7 @@ BrandText is a Streamlit-based text image generator. Users can input text and se
  BrandText是一個基於Streamlit的文字圖片生成器，使用者可以輸入文字並選擇風格，生成對應的圖片。
 
 <p align="center">
-   <img src="screenshot.png" style="width: 70%; max-width: 640px; height: auto;" alt="App Preview">
+   <img src="screenshot.png" style="width: 100%; max-width: 640px; height: auto;" alt="App Preview">
 </p>
 
 ## 檔案結構
